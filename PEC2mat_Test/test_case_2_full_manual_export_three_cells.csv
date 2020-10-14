@@ -1,0 +1,42 @@
+Request Year:,2019
+Test:,1234
+Test Description:,
+TestRegime Name:,myTestRegimeName
+TestRegime Suffix:,myTestRegimeSuffix
+TestRegime CellSize:,myTestRegimeCellSize
+TestRegime Version:,1
+Project Group Name:,myProjectGroupName
+Project Group Description:,myProjectGroupDescription
+Project Group Memo:,myProjectGroupMemo
+Project Group Storage Environment:,R.T./AMB
+Project Group Test Environment:,R.T./AMB
+Number Of Cells:,3
+Parameter names:,C-Rate (mAh)
+Parameter values:,1000
+Names of initialized variables:
+LotID:,myLotID
+Lot Description:,
+Date Made:,09/23/2016 17:01:00
+Date Made Format:,G
+Origin:,Competitive
+Requestor:,myRequestor
+Product ID:,myProductID
+Storage Temp:,R.T./AMB
+Storage Delay:,0 days
+Test Temp:,R.T./AMB
+Start Time:,11/05/2019 08:09:18
+Start Time Format:,G
+End Time:,11/07/2019 20:36:54
+End Time Format:,G
+Operator Instructions:,
+Test,Cell,Rack,Shelf,Position,Cell ID,Step,Cycle,Total Time (Seconds),Load On Time (Seconds),Step Time (Seconds),Cycle Charge Time (Seconds),Cycle Discharge Time (Seconds),Real Time,Position Start Time,Voltage (mV),Current (mA),Charge Capacity (mAh),Discharge Capacity (mAh),Charge Capacity (mWh),Discharge Capacity (mWh),ReasonCode,Charge Energy Density (Wh/kg),Discharge Energy Density (Wh/kg),50% DoD (mV),PeakPower 1 (W),PeakPower 2 (W),Open Circuit Voltage 1 (V),Open Circuit Voltage 2 (V),Internal Resistance 1 (mOhm),Internal Resistance 2 (mOhm),PT-100_1 (°C),DC Internal Resistance (mOhm),AC Internal Resistance (mOhm),Station Temperature (°C),Test,Cell,Rack,Shelf,Position,Cell ID,Step,Cycle,Total Time (Seconds),Load On Time (Seconds),Step Time (Seconds),Cycle Charge Time (Seconds),Cycle Discharge Time (Seconds),Real Time,Position Start Time,Voltage (mV),Current (mA),Charge Capacity (mAh),Discharge Capacity (mAh),Charge Capacity (mWh),Discharge Capacity (mWh),ReasonCode,Charge Energy Density (Wh/kg),Discharge Energy Density (Wh/kg),50% DoD (mV),PeakPower 1 (W),PeakPower 2 (W),Open Circuit Voltage 1 (V),Open Circuit Voltage 2 (V),Internal Resistance 1 (mOhm),Internal Resistance 2 (mOhm),PT-100_1 (°C),DC Internal Resistance (mOhm),AC Internal Resistance (mOhm),Station Temperature (°C),Test,Cell,Rack,Shelf,Position,Cell ID,Step,Cycle,Total Time (Seconds),Load On Time (Seconds),Step Time (Seconds),Cycle Charge Time (Seconds),Cycle Discharge Time (Seconds),Real Time,Position Start Time,Voltage (mV),Current (mA),Charge Capacity (mAh),Discharge Capacity (mAh),Charge Capacity (mWh),Discharge Capacity (mWh),ReasonCode,Charge Energy Density (Wh/kg),Discharge Energy Density (Wh/kg),50% DoD (mV),PeakPower 1 (W),PeakPower 2 (W),Open Circuit Voltage 1 (V),Open Circuit Voltage 2 (V),Internal Resistance 1 (mOhm),Internal Resistance 2 (mOhm),PT-100_1 (°C),DC Internal Resistance (mOhm),AC Internal Resistance (mOhm),Station Temperature (°C),
+6538,1,ACT1,A,18,LG203,6,0,0.002,0,0.002,0,0,11/05/2019 08:13:46,11/05/2019 08:13:46,4176.2696,0.004,0,0,0,0,1,,,0,0,0,0,0,0,0,,,,,6538,2,ACT1,A,19,LG204,6,0,0.002,0,0.002,0,0,11/05/2019 08:13:45,11/05/2019 08:13:45,4178.894,-0.012,0,0,0,0,1,,,0,0,0,0,0,0,0,,,,,6538,3,ACT1,A,20,LG205,6,0,0.002,0,0.002,0,0,11/05/2019 08:13:45,11/05/2019 08:13:45,4177.6732,0.002,0,0,0,0,1,,,0,0,0,0,0,0,0,,,,,
+6538,1,ACT1,A,18,LG203,6,0,1,0,1,0,0,11/05/2019 08:13:47,11/05/2019 08:13:46,4176.27,0.003,0,0,0,0,30,,,0,0,0,0,0,0,0,25,,,,6538,2,ACT1,A,19,LG204,6,0,1,0,1,0,0,11/05/2019 08:13:46,11/05/2019 08:13:45,4178.638,0.001,0,0,0,0,30,,,0,0,0,0,0,0,0,25,,,,6538,3,ACT1,A,20,LG205,6,0,1,0,1,0,0,11/05/2019 08:13:46,11/05/2019 08:13:45,4177.4672,0,0,0,0,0,30,,,0,0,0,0,0,0,0,25,,,,
+6538,1,ACT1,A,18,LG203,6,0,2,0,2,0,0,11/05/2019 08:13:48,11/05/2019 08:13:46,4176.2268,0.003,0,0,0,0,30,,,0,0,0,0,0,0,0,25.1,,,,6538,2,ACT1,A,19,LG204,6,0,2,0,2,0,0,11/05/2019 08:13:47,11/05/2019 08:13:45,4178.5064,0,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,3,ACT1,A,20,LG205,6,0,2,0,2,0,0,11/05/2019 08:13:47,11/05/2019 08:13:45,4177.4584,0.001,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,
+6538,1,ACT1,A,18,LG203,6,0,3,0,3,0,0,11/05/2019 08:13:49,11/05/2019 08:13:46,4176.2048,0.002,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,2,ACT1,A,19,LG204,6,0,3,0,3,0,0,11/05/2019 08:13:48,11/05/2019 08:13:45,4178.5892,0.001,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,3,ACT1,A,20,LG205,6,0,3,0,3,0,0,11/05/2019 08:13:48,11/05/2019 08:13:45,4177.508,0,0,0,0,0,30,,,0,0,0,0,0,0,0,25.1,,,,
+6538,1,ACT1,A,18,LG203,6,0,4,0,4,0,0,11/05/2019 08:13:50,11/05/2019 08:13:46,4176.1476,0.003,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,2,ACT1,A,19,LG204,6,0,4,0,4,0,0,11/05/2019 08:13:49,11/05/2019 08:13:45,4178.4416,0,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,3,ACT1,A,20,LG205,6,0,4,0,4,0,0,11/05/2019 08:13:49,11/05/2019 08:13:45,4177.4492,0,0,0,0,0,30,,,0,0,0,0,0,0,0,25,,,,
+6538,1,ACT1,A,18,LG203,6,0,5,0,5,0,0,11/05/2019 08:13:51,11/05/2019 08:13:46,4176.2236,0.002,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,2,ACT1,A,19,LG204,6,0,5,0,5,0,0,11/05/2019 08:13:50,11/05/2019 08:13:45,4178.6456,0.001,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,3,ACT1,A,20,LG205,6,0,5,0,5,0,0,11/05/2019 08:13:50,11/05/2019 08:13:45,4177.478,0,0,0,0,0,30,,,0,0,0,0,0,0,0,25.1,,,,
+6538,1,ACT1,A,18,LG203,6,0,6,0,6,0,0,11/05/2019 08:13:52,11/05/2019 08:13:46,4176.3152,0.003,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,2,ACT1,A,19,LG204,6,0,6,0,6,0,0,11/05/2019 08:13:51,11/05/2019 08:13:45,4178.524,0,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,3,ACT1,A,20,LG205,6,0,6,0,6,0,0,11/05/2019 08:13:51,11/05/2019 08:13:45,4177.372,0.001,0,0,0,0,30,,,0,0,0,0,0,0,0,25,,,,
+6538,1,ACT1,A,18,LG203,6,0,7,0,7,0,0,11/05/2019 08:13:53,11/05/2019 08:13:46,4176.1864,0.002,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,2,ACT1,A,19,LG204,6,0,7,0,7,0,0,11/05/2019 08:13:52,11/05/2019 08:13:45,4178.4696,0.001,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,3,ACT1,A,20,LG205,6,0,7,0,7,0,0,11/05/2019 08:13:52,11/05/2019 08:13:45,4177.516,0,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,
+6538,1,ACT1,A,18,LG203,6,0,8,0,8,0,0,11/05/2019 08:13:54,11/05/2019 08:13:46,4176.2392,0.003,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,2,ACT1,A,19,LG204,6,0,8,0,8,0,0,11/05/2019 08:13:53,11/05/2019 08:13:45,4178.4912,0.001,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,3,ACT1,A,20,LG205,6,0,8,0,8,0,0,11/05/2019 08:13:53,11/05/2019 08:13:45,4177.4984,0,0,0,0,0,30,,,0,0,0,0,0,0,0,25.1,,,,
+6538,1,ACT1,A,18,LG203,6,0,9,0,9,0,0,11/05/2019 08:13:55,11/05/2019 08:13:46,4176.2844,0.002,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,2,ACT1,A,19,LG204,6,0,9,0,9,0,0,11/05/2019 08:13:54,11/05/2019 08:13:45,4178.5284,0.001,0,0,0,0,2,,,0,0,0,0,0,0,0,,,,,6538,3,ACT1,A,20,LG205,6,0,9,0,9,0,0,11/05/2019 08:13:54,11/05/2019 08:13:45,4177.472,0,0,0,0,0,30,,,0,0,0,0,0,0,0,25,,,,
