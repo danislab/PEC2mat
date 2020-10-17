@@ -4,22 +4,10 @@
 % files
 prop.input_dir = './RAW_Data_Export';
 prop.output_dir = './mat_Data';
-prop.keep_folder_structure = true;
+prop.keep_folder_structure = false;
 
-% Prepare the absolute paths
-% create absolute path for input folder
-if strcmp(prop.input_dir(1), '.')
-    prop.input_full_dir = fullfile(pwd, prop.input_dir);
-else
-    prop.input_full_dir = fullfile(prop.input_dir);
-end
-
-% create absolute path for output folder
-if strcmp(prop.output_dir(1), '.')
-    prop.output_full_dir = fullfile(pwd, prop.output_dir);
-else
-    prop.output_full_dir = fullfile(prop.output_dir);
-end
+% Prepare the absolute path for the output folder
+prop.output_full_dir = createabsolutepath(prop.output_dir);
 
 
 %% Pick the .csv files from folders
@@ -45,12 +33,7 @@ if iscell(fullpaths)
         end
         
         % create absolute path for input folder
-        [filepath, ~, ~] = fileparts(fullpaths{i});
-        if strcmp(filepath(1), '.')
-            fullfilepath = fullfile(pwd, filepath);
-        else
-            fullfilepath = fullfile(filepath);
-        end        
+        fullfilepath = createabsolutepath(fileparts(fullpaths{i}));
         
         % convert files in filelist, remove NaNs and save tests as .mat files
         for n=1:length(filelist)
