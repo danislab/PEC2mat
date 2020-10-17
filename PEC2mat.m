@@ -1,9 +1,25 @@
-%% Definitions 
+%% Definitions
 
 % define the path for the raw data export files file and converted mat
 % files
 prop.input_dir = './RAW_Data_Export';
 prop.output_dir = './mat_Data';
+prop.keep_folder_structure = true;
+
+% Prepare the absolute paths
+% create absolute path for input folder
+if strcmp(prop.input_dir(1), '.')
+    prop.input_full_dir = fullfile(pwd, prop.input_dir);
+else
+    prop.input_full_dir = fullfile(prop.input_dir);
+end
+
+% create absolute path for output folder
+if strcmp(prop.output_dir(1), '.')
+    prop.output_full_dir = fullfile(pwd, prop.output_dir);
+else
+    prop.output_full_dir = fullfile(prop.output_dir);
+end
 
 
 %% Pick the .csv files from folders
@@ -13,39 +29,56 @@ fullpaths = uipickfiles('FilterSpec', [prop.input_dir '/*.csv'])';
 % if selected some tests convert them to structs and save them as .mat file
 if iscell(fullpaths)
     
-    % define struct for all files
-    all_files = [];
-    
     % get all picked files
     for i=1:length(fullpaths)
         
-        % if folder
+        % check if path is a folder or file
         if isfolder(fullpaths{i})
+            % go trough folder and subfolders
+            % get all .csv files recursively in folders and subfolders
             filelist = dir(fullfile(fullpaths{i}, '**\*.csv'));
-            filelist = filelist(~[filelist.isdir]);  %remove folders from list
+            % remove folders from list
+            filelist = filelist(~[filelist.isdir]); 
         else
+            % get single file
             filelist = dir(fullpaths{i});
         end
         
-        all_files = [all_files; filelist]; %#ok<AGROW>
+        % create absolute path for input folder
+        [filepath, ~, ~] = fileparts(fullpaths{i});
+        if strcmp(filepath(1), '.')
+            fullfilepath = fullfile(pwd, filepath);
+        else
+            fullfilepath = fullfile(filepath);
+        end        
         
-    end
-    
-    % convert all files, remove NaNs and save tests as .mat files
-    for i=1:length(all_files)
-        
-        file = [all_files(i).folder '\' all_files(i).name];
-        [~,name,~] = fileparts(file);
-        
-        disp(['Convert file: ' file])
-        
-        % read the .csv files
-        Test = PEC2struct(file);
-        
-        % remove NaNs from specified variables in the settings
-        Test = PECremoveNaNs(Test);
-        
-        % save the converted test structure as .mat file
-        save([prop.output_dir '/' name '.mat'], 'Test');
+        % convert files in filelist, remove NaNs and save tests as .mat files
+        for n=1:length(filelist)
+            % show path for file which is currently converted
+            disp(['Convert file: ' filelist(n).folder filesep filelist(n).name])
+            
+            % read the .csv files and convert data into structure
+            Test = PEC2struct([filelist(n).folder filesep filelist(n).name]);
+            
+            % remove NaNs from specified variables in the settings
+            Test = PECremoveNaNs(Test);
+            
+            % create output file name for .mat file
+            if prop.keep_folder_structure
+                output_file_name = strrep(strrep([filelist(n).folder filesep filelist(n).name],fullfilepath,prop.output_full_dir),'.csv','.mat');
+            else
+                output_file_name = strrep([prop.output_full_dir filesep filelist(n).name],'.csv','.mat');
+            end
+            disp(['Save file to: ' output_file_name])
+            
+            % create folders and subfolders if they do not exist
+            if ~exist(fileparts(output_file_name), 'dir')
+                mkdir(fileparts(output_file_name));
+            end
+            
+            % save the converted test structure as .mat file
+            save(output_file_name, 'Test');
+        end
     end
 end
+
