@@ -1,10 +1,34 @@
-%% Definitions
+function PEC2mat
+%PEC2mat convertes .csv export files from PEC LifeTest software to structs
+% and saves them in .mat files
+%
+% When exporting the data it is important to include the Cell ID as it is
+% used for the struct labels.
+%
+% The Excel file PEC2mat_settings.xlsx enabels different settings:
+% 1. Data format for all result fields. Custom variables can be added in
+%    the associated spreadsheet.
+% 2. Variables where NaNs should be removed. Custom variables where NaNs
+%    should be removed can be added in the associated spreadsheet.
+%
+% The default input and output directory can be defined in the next
+% section. It can be specify whether the folder structure should be
+% retained for the converted data or all converted files should be stored
+% in the same output directory.
+%
+% This function requires the uipickfile.m function from File Exchange:
+% Douglas Schwarz (2020). uipickfiles: uigetfile on steroids
+% (https://www.mathworks.com/matlabcentral/fileexchange/10867-uipickfiles-uigetfile-on-steroids),
+% MATLAB Central File Exchange. Retrieved October 17, 2020.
+%
 
+
+%% Definitions
 % define the path for the raw data export files file and converted mat
 % files
-prop.input_dir = './RAW_Data_Export';
+prop.input_dir = './';
 prop.output_dir = './mat_Data';
-prop.keep_folder_structure = false;
+prop.keep_folder_structure = true;
 
 % Prepare the absolute path for the output folder
 prop.output_full_dir = createabsolutepath(prop.output_dir);
@@ -65,3 +89,4 @@ if iscell(fullpaths)
     end
 end
 
+end
