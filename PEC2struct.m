@@ -58,7 +58,8 @@ while ~feof(fid)
         data_pattern = repmat('%s', [1, idx_Header_variable_stop - idx_Header_variable_start + 1]);
         
         % replace the variable format according to the definition
-        header_fomat = readtable('PEC2mat_settings.xlsx');        
+        header_fomat = readtable('PEC2mat_settings.xlsx', ...
+            'Sheet', 'Variables');        
         header_fomat.Variable = make_header_names_compatible(header_fomat.Variable);
         
         for i=1:header_Size 
